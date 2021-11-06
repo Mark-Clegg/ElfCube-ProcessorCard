@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Cosmac Elf"
 Date "2020-12-06"
-Rev "1"
+Rev "2"
 Comp ""
 Comment1 "Processor Card"
 Comment2 ""
@@ -994,7 +994,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS73" H 2900 5400 50  0001 C CNN
 	1    2900 5400
 	1    0    0    -1  
 $EndComp
-Text GLabel 1000 5400 0    50   Input ~ 0
+Text GLabel 1000 4900 0    50   Input ~ 0
 TPA
 Text GLabel 1000 6400 0    50   Input ~ 0
 TPB
@@ -1824,12 +1824,12 @@ $EndComp
 $Comp
 L 74xx:74LS32 U1
 U 2 1 604DB09A
-P 4850 6950
-F 0 "U1" H 4850 7275 50  0000 C CNN
-F 1 "74LS32" H 4850 7184 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 4850 6950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 4850 6950 50  0001 C CNN
-	2    4850 6950
+P 1500 5000
+F 0 "U1" H 1500 5325 50  0000 C CNN
+F 1 "74LS32" H 1500 5234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 1500 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1500 5000 50  0001 C CNN
+	2    1500 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1932,18 +1932,28 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS73" H 2900 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 5400 1000 5400
+	2600 5400 2400 5400
 Wire Wire Line
-	4550 7050 4400 7050
+	2400 5400 2400 5000
 Wire Wire Line
-	4400 7050 4400 6850
-Connection ~ 4400 6400
+	2400 5000 1800 5000
 Wire Wire Line
-	4550 6850 4400 6850
-Connection ~ 4400 6850
+	1000 4900 1200 4900
 Wire Wire Line
-	4400 6850 4400 6400
-NoConn ~ 5150 6950
+	1200 5100 1100 5100
+Wire Wire Line
+	1100 5100 1100 5250
+$Comp
+L power:GND #PWR0103
+U 1 1 61974A32
+P 1100 5250
+F 0 "#PWR0103" H 1100 5000 50  0001 C CNN
+F 1 "GND" H 1105 5077 50  0000 C CNN
+F 2 "" H 1100 5250 50  0001 C CNN
+F 3 "" H 1100 5250 50  0001 C CNN
+	1    1100 5250
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	3550 3650 3550 4750
 Wire Bus Line
