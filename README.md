@@ -1,5 +1,7 @@
 # Elf-Cube - Processor card
 Simple retro computer based on the 1802 series of processors.
 
-Holds the main CPU, and 2 x 32K RAM/ROM sockets. Jumpers next to each memory socket select ROM/RAM by connecting the ~MWR line, or tying high pin 27.
-Q and ~EF4 are also routed to an additional 6 pin connector for bit banged serial support. (EF4 can be disconnected via a jumper, and also connected to ~interrupt via a jumper)
+Holds the main CPU, 1 x 32K ROM and 2 x 32K RAM sockets.
+
+After reset, ROM runs from 0x0000 - 0x7FFF and RAM from 0x8000 - 0xFFFF. As soon as an instruction fetch occurs from RAM, the
+ROM is replaced with the second RAM chip leaving a full 64K RAM available to user programs.
